@@ -232,13 +232,15 @@ export default function App() {
 try {
      
       
-      const response = await fetch(
-        ${API_BASE_URL}/add-employee/${employeeId}/${userType},
+    axios.post(
+        ${API_BASE_URL}/calling-tracker/${employeeId}/${userType},
+        dataToUpdate,
         {
-          method: "POST",
-          body: formDataToSend,
+          headers: {
+            "Content-Type": "application/json",
+          },
         }
-      );
+
       const responseBody = await response.json();
       console.log("Response Body:", responseBody);
       let newId = responseBody.id;
@@ -392,6 +394,9 @@ try {
 ![Aspose Words 3f0dfcdd-72f5-4fdf-b605-5f61214113ac 008](https://github.com/user-attachments/assets/efffedfe-fd60-40eb-b249-0609be1e5433)
 
 ## Component:
+1. axios: A popular promise-based HTTP client for the browser and Node.js.
+2. toast: Likely a library for displaying notifications to the user, possibly a toast message.
+3. socket.io: A library for real-time web communication.
 
 
 # API Fetching in React
@@ -546,3 +551,29 @@ try {
 ```
 ![Aspose Words d945a0ba-dd9c-48d5-bad3-b8d911a6f3f6 007](https://github.com/user-attachments/assets/4ede8b61-48c5-4cda-a4c6-d2f030151ea7)
 
+# Functions
+
+**Fetch API**:fetch(url): 
+1. Sends a GET request to the API.
+
+**Response Handling**:
+1. response.ok: Checks if the response status is in the range 200–299.
+
+2. If the response is not OK, an error is thrown with the HTTP status code.
+
+3. response.json(): Converts the response to a JSON object.
+
+**Set State**: 
+1. setCallingList(data.content): Updates the state with the fetched data.
+
+**Axios POST Request**: 
+1. axios.post(url, data, config): Sends a POST request to the specified URL.
+
+2. dataToUpdate: The data being sent to the API.
+
+3. headers: Additional HTTP headers (e.g., Content-Type).
+
+**Response Handling**:
+1. response.ok: Checks if the response status is in the range 200–299.
+2. If the response is not OK, an error is thrown with the HTTP status code.
+3. response.json(): Converts the response to a JSON object.
