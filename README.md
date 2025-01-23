@@ -192,7 +192,7 @@ export default App;
 
 
 
-## Component Information
+# Component Information
 
 ### 1. Component Purpose and Overview:
 The purpose of this component is to manage the Calling Tracker Form functionality. It is responsible for fetching data, submitting new data, and updating the calling tracker. The component also integrates with APIs, handles socket transmissions, and shows success/error notifications to the user.
