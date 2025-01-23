@@ -229,6 +229,207 @@ export default function App() {
 ### CallingTrackerForm.jsx
 
 ```javascript
+try {
+     
+      
+      const response = await fetch(
+        ${API_BASE_URL}/add-employee/${employeeId}/${userType},
+        {
+          method: "POST",
+          body: formDataToSend,
+        }
+      );
+      const responseBody = await response.json();
+      console.log("Response Body:", responseBody);
+      let newId = responseBody.id;
+
+      if (response.ok) {
+        console.log(loginEmployeeName);
+
+        const emitData = {
+          employeeId: newId,
+          userType: "Recruiters",
+          employeeName: formData.employeeName,
+          dateOfJoining: getFormattedDateTime(),
+          userName: formData.userName,
+          designation: "",
+          department: "",
+          officialMail: "",
+          employeeEmail: "",
+          employeeNumber: "",
+          officialContactNumber: "",
+          alternateContactNo: "",
+          dateOfBirth: "",
+          gender: "",
+          companyMobileNumber: "",
+          whatsAppNumber: "",
+          emergencyContactPerson: "",
+          emergencyContactNumber: "",
+          emergencyPersonRelation: "",
+          employeePresentAddress: "",
+          employeeExperience: "",
+          perks: "",
+          maritalStatus: "",
+          anniversaryDate: "",
+          tshirtSize: "",
+          lastCompany: "",
+          workLocation: "",
+          entrySource: "",
+          employeeStatus: "",
+          lastWorkingDate: "",
+          reasonForLeaving: "",
+          inductionYesOrNo: "",
+          inductionComment: "",
+          trainingSource: "",
+          trainingCompletedYesOrNo: "",
+          trainingTakenCount: "",
+          roundsOfInterview: "",
+          interviewTakenPerson: "",
+          warningComments: "",
+          performanceIndicator: "",
+          teamLeaderMsg: loginEmployeeName,
+          editDeleteAuthority: "",
+          linkedInURl: "",
+          faceBookURL: "",
+          twitterURl: "",
+          employeeAddress: "",
+          bloodGroup: "",
+          aadhaarNo: "",
+          panNo: "",
+          educationalQualification: "",
+          offeredSalary: "",
+          jobRole: formData.jobRole,
+          professionalPtNo: "",
+          esIcNo: "",
+          pfNo: "",
+          employeePassword: "",
+          confirmPassword: "",
+          profileImage: null,
+          document: null,
+          resumeFile: null,
+          insuranceNumber: "",
+          reportingMangerName: "",
+          reportingMangerDesignation: "",
+        };
+        console.log(emitData);
+
+        toast.success("Employee Data Added Successfully.");
+        socket.emit("add_recruiter_event", emitData);
+        setFormData({
+          employeeId: "0",
+          employeeName: "",
+          dateOfJoining: "",
+          userName: "",
+          designation: "",
+          department: "",
+          officialMail: "",
+          employeeEmail: "",
+          employeeNumber: "",
+          officialContactNumber: "",
+          alternateContactNo: "",
+          dateOfBirth: "",
+          gender: "",
+          companyMobileNumber: "",
+          whatsAppNumber: "",
+          emergencyContactPerson: "",
+          emergencyContactNumber: "",
+          emergencyPersonRelation: "",
+          employeePresentAddress: "",
+          employeeExperience: "",
+          perks: "",
+          maritalStatus: "",
+          anniversaryDate: "",
+          tshirtSize: "",
+          lastCompany: "",
+          workLocation: "",
+          entrySource: "",
+          employeeStatus: "",
+          lastWorkingDate: "",
+          reasonForLeaving: "",
+          inductionYesOrNo: "",
+          inductionComment: "",
+          trainingSource: "",
+          trainingCompletedYesOrNo: "",
+          trainingTakenCount: "",
+          roundsOfInterview: "",
+          interviewTakenPerson: "",
+          warningComments: "",
+          performanceIndicator: "",
+          teamLeaderMsg: "",
+          editDeleteAuthority: "",
+          linkedInURl: "",
+          faceBookURL: "",
+          twitterURl: "",
+          employeeAddress: "",
+          bloodGroup: "",
+          aadhaarNo: "",
+          panNo: "",
+          educationalQualification: "",
+          offeredSalary: "",
+          jobRole: "",
+          professionalPtNo: "",
+          esIcNo: "",
+          pfNo: "",
+          employeePassword: "",
+          confirmPassword: "",
+          profileImage: null,
+          document: null,
+          resumeFile: null,
+          insuranceNumber: "",
+          reportingMangerName: "",
+          reportingMangerDesignation: "",
+        });
+      } else {
+        toast.error("Please Fill All Inputs.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      toast.error("Error occurred while adding employee data.");
+    }
+convert into makedown
+
+```
+![Aspose Words d945a0ba-dd9c-48d5-bad3-b8d911a6f3f6 007](https://github.com/user-attachments/assets/4ede8b61-48c5-4cda-a4c6-d2f030151ea7)
+
+## Component and Functions:
+
+1. **React State Hooks**: Used for managing component state.
+2. **Axios**: Utilized for making HTTP requests.
+3. **Socket.IO**: Implements real-time communication.
+4. **Toast Notifications**: Provides feedback to users.
+5. **Helper Functions**: Modularized logic for reusable purposes.
+
+# API Fetching in React
+
+API fetching in React means getting data from an external source, like a server or database, using an API (a way to communicate between systems). When you make a request to an API, you ask for information, and the API sends it back to your React app.
+
+## Why use API fetching in React?
+
+1. **Get Dynamic Data**: Your app can show real-time data, like the latest news, weather, or user information, by fetching it from an API.
+   
+2. **Organize Code Better**: The app gets data from a backend (like a server), while React focuses on showing it to users. This keeps your code clean.
+
+3. **Save Data**: You can send or receive data to/from a server. For example, if a user fills out a form, you can send that data to be saved.
+
+4. **Load Data in the Background**: React can fetch data without freezing the page, so users can still interact with the app while the data loads.
+## Example of API Fetching
+
+```js
+const response = await fetch(
+  `${API_BASE_URL}/calling-lineup/${employeeId}/${userType}?searchTerm=${searchTerm}&page=${page}&size=${size}`
+);
+
+if (!response.ok) {
+  throw new Error(`HTTP error! Status: ${response.status}`);
+}
+
+const data = await response.json();
+setCallingList(data.content);
+```
+
+### CallingTrackerForm.jsx
+
+```javascript
 const response = await fetch(
   `${API_BASE_URL}/calling-lineup/${employeeId}/${userType}?searchTerm=${searchTerm}&page=${page}&size=${size}`
 );
@@ -363,39 +564,3 @@ try {
 }
 
 ```
-## Component and Functions:
-
-1. **React State Hooks**: Used for managing component state.
-2. **Axios**: Utilized for making HTTP requests.
-3. **Socket.IO**: Implements real-time communication.
-4. **Toast Notifications**: Provides feedback to users.
-5. **Helper Functions**: Modularized logic for reusable purposes.
-
-# API Fetching in React
-
-API fetching in React means getting data from an external source, like a server or database, using an API (a way to communicate between systems). When you make a request to an API, you ask for information, and the API sends it back to your React app.
-
-## Why use API fetching in React?
-
-1. **Get Dynamic Data**: Your app can show real-time data, like the latest news, weather, or user information, by fetching it from an API.
-   
-2. **Organize Code Better**: The app gets data from a backend (like a server), while React focuses on showing it to users. This keeps your code clean.
-
-3. **Save Data**: You can send or receive data to/from a server. For example, if a user fills out a form, you can send that data to be saved.
-
-4. **Load Data in the Background**: React can fetch data without freezing the page, so users can still interact with the app while the data loads.
-## Example of API Fetching
-
-```js
-const response = await fetch(
-  `${API_BASE_URL}/calling-lineup/${employeeId}/${userType}?searchTerm=${searchTerm}&page=${page}&size=${size}`
-);
-
-if (!response.ok) {
-  throw new Error(`HTTP error! Status: ${response.status}`);
-}
-
-const data = await response.json();
-setCallingList(data.content);
-```
-![Aspose Words d945a0ba-dd9c-48d5-bad3-b8d911a6f3f6 007](https://github.com/user-attachments/assets/4ede8b61-48c5-4cda-a4c6-d2f030151ea7)
