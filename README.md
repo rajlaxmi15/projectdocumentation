@@ -386,18 +386,13 @@ try {
       console.error("Error:", error);
       toast.error("Error occurred while adding employee data.");
     }
-convert into makedown
+
 
 ```
-![Aspose Words d945a0ba-dd9c-48d5-bad3-b8d911a6f3f6 007](https://github.com/user-attachments/assets/4ede8b61-48c5-4cda-a4c6-d2f030151ea7)
+![Aspose Words 3f0dfcdd-72f5-4fdf-b605-5f61214113ac 008](https://github.com/user-attachments/assets/efffedfe-fd60-40eb-b249-0609be1e5433)
 
-## Component and Functions:
+## Component:
 
-1. **React State Hooks**: Used for managing component state.
-2. **Axios**: Utilized for making HTTP requests.
-3. **Socket.IO**: Implements real-time communication.
-4. **Toast Notifications**: Provides feedback to users.
-5. **Helper Functions**: Modularized logic for reusable purposes.
 
 # API Fetching in React
 
@@ -413,21 +408,6 @@ API fetching in React means getting data from an external source, like a server 
 
 4. **Load Data in the Background**: React can fetch data without freezing the page, so users can still interact with the app while the data loads.
 ## Example of API Fetching
-
-```js
-const response = await fetch(
-  `${API_BASE_URL}/calling-lineup/${employeeId}/${userType}?searchTerm=${searchTerm}&page=${page}&size=${size}`
-);
-
-if (!response.ok) {
-  throw new Error(`HTTP error! Status: ${response.status}`);
-}
-
-const data = await response.json();
-setCallingList(data.content);
-```
-
-### CallingTrackerForm.jsx
 
 ```javascript
 const response = await fetch(
@@ -564,3 +544,5 @@ try {
 }
 
 ```
+![Aspose Words d945a0ba-dd9c-48d5-bad3-b8d911a6f3f6 007](https://github.com/user-attachments/assets/4ede8b61-48c5-4cda-a4c6-d2f030151ea7)
+
