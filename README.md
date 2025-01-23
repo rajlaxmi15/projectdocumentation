@@ -4,28 +4,36 @@
 
 ### Step 1: Install Node.js And npm
 Start by installing the Node.js installer for windows. Visit the official Node.js website and download the LTS version. Once the Installer is downloaded, run it, and follow the prompts, ensuring you don’t change any default settings. Click “Next” until the installation is complete.
+![Aspose Words f200e12c-2073-48ff-9c41-ed99252eaf2c 001](https://github.com/user-attachments/assets/2d13e3f2-b0c9-4310-8f4e-986682d89794)
+
 
 ### Step 2: Verify that Node.js npm are installed.
 After the installation is complete, you can verify that Node.js and npm are installed by opening a command prompt and running the following commands:
 ```bash
 node --version
 ```
+
 If the installation is successful, the terminal will display the installed version of Node.js.
 ```bash
 npm --version
 ```
+![Aspose Words f200e12c-2073-48ff-9c41-ed99252eaf2c 002](https://github.com/user-attachments/assets/fbdc5d1b-7559-42ab-b46d-5ec89b8697f8)
+
 If the installation is successful, the terminal will display the installed version of npm.
 These commands should display the version numbers for Node.js and npm, respectively.
 
 # 2. How To Run Project?
 ### Step 1: Open Your Project in an IDE
 Open your preferred IDE (e.g., Visual Studio Code) and navigate to the folder where your React app was installed.
+![Aspose Words 0004257e-e00a-4b98-b7bb-bfbae20e7c51 003](https://github.com/user-attachments/assets/ff61d9a2-f072-4fc7-848a-900977978364)
 
 ### Step 2: Create a New React Project
 Now that you have Create React App installed, you can use it to create a new React project. To do this, open a command prompt, go to the directory where you want the project to live, and run the following command:
 ```bash
 npm create vite@latest atsfrontend
 ```
+![Aspose Words 0004257e-e00a-4b98-b7bb-bfbae20e7c51 004](https://github.com/user-attachments/assets/4d24d614-73c7-4a62-8a84-713c9ae6db8f)
+
 Replace “atsfrontend” with the desired name for your project. Create React App will create a new directory with the specified name and generate a new React project with a recommended project structure and configuration.
 ### Step 3: Start The Development Server
 Once the project is created, head over to the project directory by running the following command in the command prompt:
@@ -36,9 +44,15 @@ Replace “atsfrontend” with the name of your project directory. Now, start th
 ```bash
 npm install
 ```
+![Aspose Words 0004257e-e00a-4b98-b7bb-bfbae20e7c51 005](https://github.com/user-attachments/assets/1fad0f4e-94ec-4267-86d5-272ab5a66657)
+
 ```bash
 npm run dev
 ```
+This command launches the development server, which watches for changes to your project files and automatically reloads the browser when changes are detected.
+<br/>
+![Aspose Words 0004257e-e00a-4b98-b7bb-bfbae20e7c51 006](https://github.com/user-attachments/assets/e92854c1-a422-44ed-a2cf-4ead47334f9d)
+
 # 3. Port Number
 
 ## 1. Purpose of the Port Configuration
