@@ -129,7 +129,7 @@ In React apps created with Create React App, `App.jsx` is automatically included
 # CSS
 
 ## 6.1 Tailwind CSS
-Tailwind CSS offers a utility-first approach to styling, which can greatly speed up the development process. It allows you to apply styles directly in your JSX, reducing the need to switch between CSS and JavaScript files.
+[Tailwind](https://tailwindcss.com/) CSS offers a utility-first approach to styling, which can greatly speed up the development process. It allows you to apply styles directly in your JSX, reducing the need to switch between CSS and JavaScript files.
 
 ### The Tailwind CSS configuration file (`tailwind.config.js`)
 ```js
@@ -174,7 +174,7 @@ export default Button;
 - `rounded-lg` applies rounded corners.
 - `hover:bg-blue-700` changes the background color on hover.
 ## 6.2 Bootstrap
-Bootstrap is a popular open-source front-end framework that provides a collection of CSS and JavaScript tools for building responsive, mobile-first websites. It was originally developed by Twitter and is now one of the most widely used frameworks in web development.
+[Bootstrap](https://getbootstrap.com/) is a popular open-source front-end framework that provides a collection of CSS and JavaScript tools for building responsive, mobile-first websites. It was originally developed by Twitter and is now one of the most widely used frameworks in web development.
 
 The following two lines of code are used to import Bootstrap styles and JavaScript functionality into a React project:
 ```js
