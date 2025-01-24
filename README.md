@@ -131,6 +131,7 @@ In React apps created with Create React App, `App.jsx` is automatically included
 ## 6.1 Tailwind CSS
 <a href="https://tailwindcss.com/" target="_blank">Tailwind</a> CSS offers a utility-first approach to styling, which can greatly speed up the development process. It allows you to apply styles directly in your JSX, reducing the need to switch between CSS and JavaScript files.
 
+<a href="https://tailwindcss.com/" target="_blank">Tailwind</a> CSS offers a utility-first approach to styling, which can greatly speed up the development process. It allows you to apply styles directly in your JSX, reducing the need to switch between CSS and JavaScript files.
 
 ### The Tailwind CSS configuration file (`tailwind.config.js`)
 ```js
