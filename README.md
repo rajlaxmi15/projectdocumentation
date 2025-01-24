@@ -245,6 +245,7 @@ try {
 
 ```
 <img src="https://github.com/user-attachments/assets/17b629ae-9bfe-43f4-a034-79875c882f4a" width="900">
+
 ## Dependencies:
 1. <a href="https://www.npmjs.com/package/axios" target="_blank">Axios</a>: A popular promise-based HTTP client for the browser and Node.js.
 
