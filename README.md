@@ -246,7 +246,6 @@ try {
 ```
 <img src="https://github.com/user-attachments/assets/17b629ae-9bfe-43f4-a034-79875c882f4a" width="900">
 ## Dependencies:
-## Dependencies:
 1. <a href="https://www.npmjs.com/package/axios" target="_blank">Axios</a>: A popular promise-based HTTP client for the browser and Node.js.
 ## Request Body:
 2. **dataToUpdate** (Object): This object contains the data to be sent in the request body. The data is typically in JSON format and can include various fields related to the calling tracker (e.g., call count, duration, etc.).
