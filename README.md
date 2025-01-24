@@ -1,6 +1,60 @@
 # Project Documentation
+# 1. Development Workflow
 
-# 1. How To Install React.js On Windows?
+## Front-End Interaction:
+
+- The user interacts with the front-end of the application, built using HTML, CSS, and JavaScript.
+- The front-end, powered by ReactJS library, renders the user interface and handles user inputs.
+- When the user performs an action (e.g., clicking a button, submitting a form), the front-end sends a request to the API.
+
+## API Processing:
+
+- The API receives the request from the front-end.
+- It processes the request, which may involve:
+  - Validating the input data
+  - Fetching data from the database
+  - Performing business logic operations
+  - Creating or updating data in the database
+
+## Back-End Processing:
+
+- The API interacts with the back-end, which is built using Java and the Spring Boot framework.
+- The back-end handles the API request, executes the necessary logic, and communicates with the database using the JDBC connector.
+
+## Database Interaction:
+
+- The back-end interacts with the MySQL database through the JDBC connector.
+- It retrieves or stores data as per the API request.
+
+## API Response:
+
+- Once the back-end processes the request and interacts with the database, it sends a response back to the API.
+
+## Front-End Update:
+
+- The API receives the response from the back-end.
+- It sends the response to the front-end.
+- The front-end updates the user interface based on the received data, providing feedback to the user.
+
+## DevOps:
+
+- After development, the application is deployed using DevOps practices.
+- Nginx server is used to handle incoming requests and route them to the appropriate backend services.
+- Hostinger provides the infrastructure for hosting the application and managing the database.
+
+## Workflow Summary:
+
+1. User interaction on the front-end.
+2. Communication between the front-end, API, and back-end.
+3. Database interaction for data storage and retrieval.
+4. Deployment and maintenance using DevOps tools.
+
+This workflow ensures that user actions are processed efficiently, data is managed securely, and the application is available to users.
+
+![WhatsApp Image 2025-01-24 at 12 23 48 PM](https://github.com/user-attachments/assets/cbd3f4da-afb5-439d-8b45-8c3f285fb2f9)
+
+
+# 2. How To Install React.js On Windows?
 
 ### Step 1: Install Node.js And npm
 
@@ -24,7 +78,7 @@ If the installation is successful, the terminal will display the installed versi
 
 These commands should display the version numbers for Node.js and npm, respectively.
 
-# 2. How To Run Project?
+# 3. How To Run Project?
 ### Step 1: Open Your Project in an IDE
 Open your preferred IDE (e.g., Visual Studio Code) and navigate to the folder where your React app was installed.
 ![IDE](https://github.com/user-attachments/assets/01d2c8dc-5cd2-419f-b9c1-dc4856cad775)
@@ -55,7 +109,7 @@ This command launches the development server, which watches for changes to your 
 <br/>
 ![Page](https://github.com/user-attachments/assets/a3b4ebd5-0952-48a8-afd2-278e10c3934a)
 
-# 3. Port Number
+# 4. Port Number
 
 ## 1. Purpose of the Port Configuration
 The frontend of this project is built using React. By default, React runs on port 3000 during development. This documentation provides guidelines for developers to ensure that the React development server consistently uses port 3000, even if other processes might attempt to occupy this port.
@@ -70,7 +124,7 @@ This project is designed to run only on port 3000 during development. React's de
 - **Firewall Issues:** Ensure that your firewall or network settings are configured to allow traffic on port 3000 for local development.
 
 This command launches the development server, which watches for changes to your project files and automatically reloads the browser when changes are detected.
-# Project Structure
+# 5. Project Structure
 
 ```
 atsfrontend
@@ -103,7 +157,7 @@ atsfrontend
 └── README.md
 ```
 
-# App.jsx
+# 6. App.jsx
 
 In a React application, `App.jsx` is a central component file that typically serves as the entry point for rendering the main application. It acts as the root component of your React app and often contains the core structure and layout of the application.
 
@@ -126,9 +180,9 @@ In React apps created with Create React App, `App.jsx` is automatically included
 - Serve as the central hub to load and nest other child components.
 - Implement routing using tools like `react-router`.
 
-# CSS
+# 7. CSS
 
-## 6.1 Tailwind CSS
+## 7.1 Tailwind CSS
 <a href="https://tailwindcss.com/" target="_blank" >Tailwind</a> CSS offers a utility-first approach to styling, which can greatly speed up the development process. It allows you to apply styles directly in your JSX, reducing the need to switch between CSS and JavaScript files.
 
 ### The Tailwind CSS configuration file (`tailwind.config.js`)
@@ -173,7 +227,7 @@ export default Button;
 - `text-white` makes the text color white.
 - `rounded-lg` applies rounded corners.
 - `hover:bg-blue-700` changes the background color on hover.
-## 6.2 Bootstrap
+## 7.2 Bootstrap
 [Bootstrap](https://getbootstrap.com/) is a popular open-source front-end framework that provides a collection of CSS and JavaScript tools for building responsive, mobile-first websites. It was originally developed by Twitter and is now one of the most widely used frameworks in web development.
 
 The following two lines of code are used to import Bootstrap styles and JavaScript functionality into a React project:
@@ -208,7 +262,7 @@ export default App;
 
 
 
-# Component Information
+# 8. Component Information
 
 ### 1. Component Purpose and Overview:
 The purpose of this component is to manage the Calling Tracker Form functionality. It is responsible for fetching data, submitting new data, and updating the calling tracker. The component also integrates with APIs, handles socket transmissions, and shows success/error notifications to the user.
@@ -256,7 +310,7 @@ try {
 
 
 
-# API Fetching in React
+# 9. API Fetching in React
 
 API fetching in React means getting data from an external source, like a server or database, using an API (a way to communicate between systems). When you make a request to an API, you ask for information, and the API sends it back to your React app.
 
