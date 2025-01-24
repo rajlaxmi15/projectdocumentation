@@ -129,7 +129,7 @@ In React apps created with Create React App, `App.jsx` is automatically included
 # CSS
 
 ## 6.1 Tailwind CSS
-<a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer">Tailwind</a> CSS offers a utility-first approach to styling, which can greatly speed up the development process. It allows you to apply styles directly in your JSX, reducing the need to switch between CSS and JavaScript files.
+<a href="https://tailwindcss.com/" target="_blank" >Tailwind</a> CSS offers a utility-first approach to styling, which can greatly speed up the development process. It allows you to apply styles directly in your JSX, reducing the need to switch between CSS and JavaScript files.
 
 ### The Tailwind CSS configuration file (`tailwind.config.js`)
 ```js
@@ -245,11 +245,13 @@ try {
 
 ```
 <img src="https://github.com/user-attachments/assets/17b629ae-9bfe-43f4-a034-79875c882f4a" width="900">
+## Dependencies:
+1. [Axios](https://www.npmjs.com/package/axios): A popular promise-based HTTP client for the browser and Node.js.
 
-## Component:
-1. axios: A popular promise-based HTTP client for the browser and Node.js.
-2. toast: Likely a library for displaying notifications to the user, possibly a toast message.
-3. socket.io: A library for real-time web communication.
+## Request Body:
+2. **dataToUpdate** (Object): This object contains the data to be sent in the request body. The data is typically in JSON format and can include various fields related to the calling tracker (e.g., call count, duration, etc.).
+
+
 
 
 # API Fetching in React
@@ -277,29 +279,9 @@ if (!response.ok) {
 ```
 ![Api](https://github.com/user-attachments/assets/3113931a-1d56-4148-a084-57b9ed51466b)
 
-# Functions
+## Dependencies
+- **fetch**: A native JavaScript function to make HTTP requests. It returns a `Promise` that resolves to the response of the request.
 
-**Fetch API**:fetch(url): 
-1. Sends a GET request to the API.
-
-**Response Handling**:
-1. response.ok: Checks if the response status is in the range 200–299.
-
-2. If the response is not OK, an error is thrown with the HTTP status code.
-
-3. response.json(): Converts the response to a JSON object.
-
-**Set State**: 
-1. setCallingList(data.content): Updates the state with the fetched data.
-
-**Axios POST Request**: 
-1. axios.post(url, data, config): Sends a POST request to the specified URL.
-
-2. dataToUpdate: The data being sent to the API.
-
-3. headers: Additional HTTP headers (e.g., Content-Type).
-
-**Response Handling**:
-1. response.ok: Checks if the response status is in the range 200–299.
-2. If the response is not OK, an error is thrown with the HTTP status code.
-3. response.json(): Converts the response to a JSON object.
+## Request Format
+- The request is made to the calling lineup API endpoint with dynamic segments (`employeeId` and `userType`) as part of the URL.
+- Query parameters (`searchTerm`, `page`, `size`) are appended to the URL to provide filtering and pagination capabilities.
