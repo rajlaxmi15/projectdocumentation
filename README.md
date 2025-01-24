@@ -63,7 +63,7 @@ The frontend of this project is built using React. By default, React runs on por
 ## 2. Project Port Requirements
 This project is designed to run only on port 3000 during development. React's development server will be configured to always use port 3000, and developers should ensure no other services are using this port. If the port is already occupied, React will throw an error, and you will need to free up the port.
 
-[http://localhost:3000](http://localhost:3000)
+http://localhost:3000
 
 ## 3. Troubleshooting
 - **Port Conflict:** If port 3000 is already in use by another application, you will need to free up the port or modify the configuration to use a different one.
