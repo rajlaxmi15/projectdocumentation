@@ -18,9 +18,10 @@ If the installation is successful, the terminal will display the installed versi
 ```bash
 npm --version
 ```
+If the installation is successful, the terminal will display the installed version of npm.
+
 ![Version](https://github.com/user-attachments/assets/01ce4967-1297-463c-8d23-ef489ffba116)
 
-If the installation is successful, the terminal will display the installed version of npm.
 These commands should display the version numbers for Node.js and npm, respectively.
 
 # 2. How To Run Project?
