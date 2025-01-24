@@ -242,7 +242,7 @@ try {
         }
 
 ```
-![Add candidate](https://github.com/user-attachments/assets/17b629ae-9bfe-43f4-a034-79875c882f4a)
+<img src="https://github.com/user-attachments/assets/17b629ae-9bfe-43f4-a034-79875c882f4a" width="900">
 
 ## Component:
 1. axios: A popular promise-based HTTP client for the browser and Node.js.
